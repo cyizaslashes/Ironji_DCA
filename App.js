@@ -1,11 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import SplashScreen from './src/screens/SplashScreen';
+import OnBoardingScreen from './src/screens/OnBoardingScreen/OnBoardingScreen';
+import BoardScreen from './src/screens/BoardScreen/BoardScreen';
+import LoginPage from './src/screens/LoginScreen/LoginPage';
+import SignInPage from './src/screens/SignInScreen/SignInPage';
+import SlideshowScreen from './src/screens/SlideshowScreen/SlideshowScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <OnBoardingScreen/>
     </View>
   );
 }
@@ -13,7 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
