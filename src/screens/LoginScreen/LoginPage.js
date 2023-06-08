@@ -1,8 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput,TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import {firebase} from '../../../config.js';
+import { useNavigation } from '@react-navigation/native';
+import React, {useState} from 'react';
 
-export default function LoginScreen() {
+const LoginScreen =() => {
+ /*const navigation = useNavigation()
+ const [email,setEmail] = useState('')
+ const [Password,setPassword] = useState ('')
+
+ loginUser = async(email,Password) => {
+
+  try {
+    await firebase.auth().signInWithEmailAndPassword(email,Password)
+  }catch(error){
+    alert(error.message)
+  }
+}
+*/
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>
@@ -13,7 +28,10 @@ export default function LoginScreen() {
           <Ionicons name="person-outline" size={24} color="#C75F00" />
           <TextInput
             style={styles.input}
-            placeholder="Username"
+            placeholder="email"
+            onChangeText={(email)=> setEmail(email)}
+            autoCapitalize='none'
+            autoCorrect={false}
             placeholderTextColor="#393e46"
           />
         </View>
@@ -22,14 +40,20 @@ export default function LoginScreen() {
           <TextInput
             style={styles.input}
             placeholder="Password"
+            onChangeText={(Password)=> setPassword(Password)}
+            autoCapitalize='none'
+            autoCorrect={false}
             placeholderTextColor="#393e46"
-            secureTextEntry
+            secureTextEntry={true}
           />
         </View>
       </View>
-      <View style={styles.buttonContainer}>
+      <TouchableOpacity style={styles.buttonContainer}
+      onPress={()=>loginUser (email,Password)}
+      >
         <Text style={styles.buttonText}>Login</Text>
-      </View>
+      </TouchableOpacity>
+    
       <View>
       <Text style={styles.logo}>Ironji</Text>
       <Text style={styles.text04}>Powered By</Text>
@@ -107,3 +131,4 @@ const styles = StyleSheet.create({
   },
 
  });
+ export default LoginScreen

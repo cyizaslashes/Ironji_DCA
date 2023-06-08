@@ -9,7 +9,10 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "extra": {
+        "googleMapsApiKey": "AIzaSyCMS3HJn6gLZVzoqS1CVFNqQ0Id9DAYmj0"
+      }
     },
     "assetBundlePatterns": [
       "**/*"
@@ -22,7 +25,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
-    },
+      
+      },
     "web": {
       "favicon": "./assets/favicon.png"
     }

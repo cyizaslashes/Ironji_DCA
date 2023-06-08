@@ -40,19 +40,19 @@ const SplashScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'fefcff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   background: {
-    backgroundColor: 'white',
+    backgroundColor: 'fefcff',
     width: '100%',
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
   circle: {
-    backgroundColor: '#C75F00',
+    backgroundColor:'#DB8300',
     borderRadius: 120,
     alignItems: 'center',
     justifyContent: 'center',
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   text05:{
     position: 'absolute',
     fontSize: 13,
-    color: '#C75F00',
+    color: '#DB8300',
     bottom: 14,
     left:47,
   },

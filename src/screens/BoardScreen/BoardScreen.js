@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const BoardScreen= () => {
   return (
@@ -12,10 +13,16 @@ const BoardScreen= () => {
           <Text style={styles.buttonText}>Add places</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.logo}>Ironji</Text>
+      
       <Text style={styles.text04}>Powered By</Text>
         <Text style={styles.text05}>Ironji</Text>
+        <View style={styles.Circle}>
+        <Text style={styles.logo}>Ironji</Text>
+       </View>
+
     </View>
+    
+    
   );
 };
 
@@ -28,18 +35,20 @@ const styles = StyleSheet.create({
   logo: {
     fontWeight: "bold",
     fontSize: 50,
-    color: '#C75F00',
-    bottom: 250,
+    color: '#ffffff',
+    bottom: -100,
   },
   buttonContainer: {
     flexDirection: 'row',
-    justifyContent:"space-between"
+    justifyContent:"space-between",
+    bottom: -300,
   },
   button: {
-    backgroundColor: '#C75F00',
+    backgroundColor: '#DB8300',
     padding: 10,
     borderRadius: 20,
     marginHorizontal: 5,
+    left:-40
   },
   buttonText: {
     color: '#fff',
@@ -48,10 +57,12 @@ const styles = StyleSheet.create({
   },
 
   button1: {
-    backgroundColor: '#010',
+    backgroundColor: '#333333',
     padding: 10,
     borderRadius: 20,
     marginHorizontal: 5,
+    left:40
+    
   },
 
   text04:{
@@ -59,14 +70,26 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: 'black',
     bottom: 30,
-    left:75,
+    left:210,
   },
   text05:{
     position: 'absolute',
     fontSize: 13,
     color: '#C75F00',
     bottom: 14,
-    left:90,
+    left:230,
+  },
+  Circle: {
+    width: 500,
+    height: 500,
+    borderRadius:500,
+    borderWidth: 1,
+    backgroundColor: '#DB8300',
+    justifyContent: 'center',
+    alignItems: 'center',
+    bottom: 350,
+    left:-5,
+    borderColor:'#fff'
   },
 });
 

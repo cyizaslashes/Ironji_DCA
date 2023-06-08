@@ -13,7 +13,7 @@ const OnBoardingScreen = () => {
       <Text style={styles.text04}>Powered By</Text>
       <Text style={styles.text05}>Ironji</Text>
       <View style={styles.buttonContainer}>
-        <Text style={styles.buttonText}><Ionicons name="ios-arrow-forward" size={60} color="#fff" /></Text>
+        <Text style={styles.buttonText}><Ionicons name="ios-arrow-forward" size={60} color="#ffffff" /></Text>
       </View>
     </View>
   );
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 28.5,
     fontWeight: 'bold',
-    color: '#C75F00',
+    color: '#DB8300',
     left:0,
   },
  
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     height: 250,
     borderRadius:500,
     borderWidth: 1,
-    backgroundColor: '#C75F00',
+    backgroundColor: '#DB8300',
     justifyContent: 'center',
     alignItems: 'center',
     bottom: -250,

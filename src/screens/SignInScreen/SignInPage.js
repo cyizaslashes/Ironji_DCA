@@ -3,25 +3,102 @@ import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-nativ
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { useState } from 'react';
+import {firebase} from '../../../config'
 
-export default function SignUp() {
+const  SignUp= ()=> {
+  /*const [email,setEmail]=useState('')
+  const [Password,setPassword]=useState('')
+  const [Firstname,setFirstname]= useState('')
+  const [Lastname,setLastname]= useState('')
+
+  registerUser= async (email,Password,Firstname,Lastname)=>{
+     try{
+        await firebase.auth().createUserWithEmailAndPassword(email,Password)
+        .then(()=>{
+          firebase.auth().currentUser.sendEmailVerification({
+            handleCodeInApp: true,
+            url:'https://ironji-datacolletionapp.firebaseapp.com'
+          })
+          .then (()=>{
+            alert('verification email sent')
+          }).catch((error)=>{
+            alert(error.message)
+          })
+          .then(()=>{
+            firebase.firestore().collection('users')
+            .doc(firestore.auth().currentUser.uid)
+            .set({
+              Firstname,
+              Lastname,
+              email,
+            })
+          }).catch((error)=>{
+            alert(error.message)
+          })
+        }).catch((error=>{
+          alert(error.message)
+        }))
+      
+      }
+
+
+    }
+   registerUser = async (email, password, firstName, lastName) => {
+      try {
+        await firebase.auth().createUserWithEmailAndPassword(email, password);
+        firebase.auth().currentUser.sendEmailVerification({
+          url: 'https://example.com/verify-email', // Replace with your verification URL
+        });
+        // Additional code after successful user registration
+      } catch (error) {
+        // Handle any errors that occur during the registration process
+        console.log('Registration error:', error);
+      }
+    };
+    */
   return (
     <View style={styles.container}>
       <Text style={styles.logo}>Sign Up</Text>
       <View style={styles.inputView}>
-      <TextInput style={styles.inputText} placeholder="Name" placeholderTextColor="#003f5c" />
+      <TextInput 
+      style={styles.inputText} 
+      placeholder="First Name" 
+      placeholderTextColor="#003f5c" 
+      OnchangeText={(Firstname)=>setFirstname(Firstname)}
+      autoCorrect={false}
+
+      />
       
       </View>
       <View style={styles.inputView}>
-        <TextInput style={styles.inputText} placeholder="Email" placeholderTextColor="#003f5c" />
+      <TextInput 
+      style={styles.inputText} 
+      placeholder="last Name" 
+      placeholderTextColor="#003f5c" 
+      OnchangeText={(Lastname)=>setLastname(Lastname)}
+      autoCorrect={false}
+
+      />
+      
       </View>
       <View style={styles.inputView}>
-        <TextInput style={styles.inputText} placeholder="Password" placeholderTextColor="#003f5c" secureTextEntry={true} />
+        <TextInput style={styles.inputText} 
+        placeholder="Email" 
+        placeholderTextColor="#003f5c"
+        OnchangeText={(email)=>setEmail(email)} 
+        autoCorrect={false}/>
       </View>
       <View style={styles.inputView}>
-        <TextInput style={styles.inputText} placeholder="Confirm Password" placeholderTextColor="#003f5c" secureTextEntry={true} />
+        <TextInput style={styles.inputText} 
+        placeholder="Password" 
+        placeholderTextColor="#003f5c" 
+        secureTextEntry={true} />
       </View>
-      <TouchableOpacity style={styles.signUpBtn}>
+      <TouchableOpacity 
+      style={styles.signUpBtn}
+      onPress={()=>SignUp(email,Firstname,Lastname,Password)}
+      >
         <Text style={styles.signUpText}>Sign Up</Text>
       </TouchableOpacity>
       <View style={styles.socialLoginContainer}>
@@ -102,3 +179,4 @@ const styles = StyleSheet.create({
     marginLeft: 1,
   },
 });
+export default SignUp

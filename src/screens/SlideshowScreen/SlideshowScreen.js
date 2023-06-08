@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const images = [
-  { id: 1, uri: 'https://example.com/image1.jpg', description: 'We help you get all your goods on time' },
-  { id: 2, uri: 'https://example.com/image2.jpg', description: 'We connect you with the driver' },
-  { id: 3, uri: 'https://example.com/image3.jpg', description: 'Find our places in our App and help us add your busines too' }
+  { id: 1, uri: 'https://www.scssoft.com/assets/images/american-truck-simulator/img_01.jpg', description: 'We help you get all your goods on time' },
+  { id: 2, uri: 'https://cdn.shrm.org/image/upload/c_crop,h_704,w_1254,x_0,y_0/c_fit,f_auto,q_auto,w_767/v1/Global%20HR/cell_phone_driving_left_side_Australia1m_qtxeuy?databtoa=eyIxNng5Ijp7IngiOjAsInkiOjAsIngyIjoxMjU0LCJ5MiI6NzA0LCJ3IjoxMjU0LCJoIjo3MDR9fQ%3D%3D', description: 'We connect you with the driver' },
+  { id: 3, uri: 'https://previews.123rf.com/images/elvetica/elvetica1812/elvetica181200170/123899974-navigation-app-with-map-on-mobile-phone-in-hand-tracking-system-flat-cartoon-style-vector.jpg', description: 'Find our places in our App and help us add your busines too' }
 ];
 
 const SlideshowScreen = () => {
